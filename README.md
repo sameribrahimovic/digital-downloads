@@ -29,3 +29,8 @@ purchases Purchase[]
 - npx prisma migrate dev to save schema changes and apply changes to db.
 
 2. Authentication
+
+- After user log in, redirect to /dashboard, that we need to create,
+- but before, if user does not have a name, redirect to /setup to setup a user name, and after redirect to dashboard,
+- also create Heading. js component that holds navbar with text logo and login/logout button,
+- import Heading component into index.js
