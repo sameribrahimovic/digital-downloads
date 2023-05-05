@@ -16,7 +16,7 @@ export default function Heading() {
 
   //if there is a session, show the actual content!
   return (
-    <header className="h-14 flex pt-5 px-5 pb-2">
+    <header className="h-14 flex pt-5 px-5 pb-2 bg-teal-600">
       <div className="text-xl">
         {/* {router.asPath === "/" ? (
           <p>Digital Downloads</p>
