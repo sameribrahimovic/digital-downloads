@@ -46,3 +46,10 @@ purchases Purchase[]
 - crete middleware/middleware.js to handle file upload,
 - install - npm install next-connect@0.12.2 multiparty,
 - create lib/upload.js and run npm install aws-sdk (AWS library) to handle handle file uploading to AWS S3 bucket
+
+4. Show products from db to dashboard
+
+- create lib/data.js(talks to db true PRISMA) and add getProducts() that gets all products from db,
+- in pages/dashboard/index.js add the getServerSideProps() function at the end to handle data server side and return products that can be displayed tru JSX on dashboard
+- for that we need to pass {products} parameter that we get from getServerSideProps() :
+  ~ export default function Dashboard({ products }) {}
