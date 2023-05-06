@@ -63,3 +63,16 @@ purchases Purchase[]
   }
 - in /lib/data.js add new helper method getProduct() to get single product from db,
   and pass that to getServerSideProps() on product/[id].js,
+
+6. Show list of products on users profile page and the signle product page
+
+- First, add a “View” link into our dashboard next to Edit button :
+    <Link href={`/product/${product.id}`}>
+        <a className='text-sm border p-2 font-bold uppercase ml-2'>
+            View
+        </a>
+    </Link>
+
+- Create the file pages/product/[id].js - when user clik on View button,
+- this page contains all relativ data of created product, like price, title, image, description...
+- Also crete pages/profile/[id].js to list and show all product created by specific user,
