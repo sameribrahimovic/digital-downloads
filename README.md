@@ -53,3 +53,13 @@ purchases Purchase[]
 - in pages/dashboard/index.js add the getServerSideProps() function at the end to handle data server side and return products that can be displayed tru JSX on dashboard
 - for that we need to pass {products} parameter that we get from getServerSideProps() :
   ~ export default function Dashboard({ products }) {}
+
+5. Edit product funcionality
+
+- Create the file pages/dashboard/product/[id].js,
+- In this file we need to have getServerSideProps() that return single product from db, and pass that product to Product function :
+  export default function Product({ product }) {
+  return <div></div>
+  }
+- in /lib/data.js add new helper method getProduct() to get single product from db,
+  and pass that to getServerSideProps() on product/[id].js,
