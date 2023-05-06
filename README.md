@@ -76,3 +76,13 @@ purchases Purchase[]
 - Create the file pages/product/[id].js - when user clik on View button,
 - this page contains all relativ data of created product, like price, title, image, description...
 - Also crete pages/profile/[id].js to list and show all product created by specific user,
+
+7. Home page - list products
+
+- list the products in the file pages/index.js like the user’s profile,
+- in getServerSideProps() add { take: 3 } parameter to show only 3 products from db,
+- last step, in data.js add condition to limit the products to the number specified:
+  if (options.take) {
+  data.take = options.take
+  }
+  - later the idea is to list most selling products here,
